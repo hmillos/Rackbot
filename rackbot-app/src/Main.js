@@ -1,18 +1,18 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
+//import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="http://www.rackbot.co">
         Rackbot
       </Link>{' '}
       {new Date().getFullYear()}
@@ -21,37 +21,21 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
 
-export default function RackbotMain(){
-  const classes = useStyles();
-  return (
+
+export default class RackbotMain extends React.Component{
+
+  render(){
+    return(
     <Container component="main" maxWidth="xs">
-      <CssBaseline />
-      <div className={classes.paper}>
-
+      <div className="paper"
+        display='flex'
+        flexDirection='column'
+        alignItems="center">
         <Typography component="h1" variant="h5">
           Solicita un servicio
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className="solicitarServicio" noValidate>
           <TextField
             margin="normal"
             required
@@ -94,7 +78,8 @@ export default function RackbotMain(){
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
+            className="Enviar"
+
           >
             Enviar
           </Button>
@@ -106,4 +91,4 @@ export default function RackbotMain(){
       </Box>
     </Container>
   );
-}
+}}
