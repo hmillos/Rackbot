@@ -9,3 +9,20 @@
 .custom-btn-toolbar > .btn {
   margin-right: 1rem;
 }
+footer {
+  text-align: center;
+}
+.btn-home {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+.std-div {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+
+}
+
+.std-card {
+  max-width: 20rem;
+}
