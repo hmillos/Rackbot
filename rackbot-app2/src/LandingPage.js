@@ -3,14 +3,14 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-
-
-
+import Jumbotron from "react-bootstrap/Jumbotron";
 import "./App.css";
 
-export function HomeRackbot (){
+
+export default function HomeRackbot (){
     return(
-    <Container>
+    <Jumbotron>
+    <Container className="p-3" maxWidth="xs" >
         <h2>Nuestras Tarifas</h2>
         <p>Podemos ofrecerte dos tipos de servicios</p>
 <CardDeck >
@@ -37,7 +37,13 @@ export function HomeRackbot (){
         <Card.Body>
             <Card.Title>Servicio a Domicilio</Card.Title>
             <Card.Text>
-            Si el problema requiere una visita, uno de nuestros profesionales te visitará.
+            <p>Si el problema requiere una visita, uno de nuestros profesionales te visitará.</p>
+                <p><strong>Ventajas y catacterísticas:</strong></p>
+                <ul>
+                    <li>Tiempo de espera: Según agendamiento</li>
+                    <li>Servicios de mayor complejidad.</li>
+                    <li>Necesarios cuando no hay acceso o conectividad</li>
+                </ul>
             </Card.Text>
         </Card.Body>
         <Card.Footer>
@@ -52,5 +58,6 @@ export function HomeRackbot (){
 <Button variant="primary">Solicitar Servicio</Button>
 </div>
 </Container>
+</Jumbotron>
 );
 }

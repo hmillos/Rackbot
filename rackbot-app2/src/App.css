@@ -22,7 +22,6 @@ footer {
   margin-bottom: 0rem;
 
 }
-
-.std-card {
-  max-width: 20rem;
+.App .navbar-brand {
+  font-weight: bold;
 }
