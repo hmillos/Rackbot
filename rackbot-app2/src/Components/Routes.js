@@ -6,12 +6,8 @@ import SolServicio from "./SolServicio";
 export default function Routes() {
   return (
     <Switch>
-      <Route exact path="/">
-        <HomeRackbot />
-      </Route>
-      <Route exact path="/agendar">
-        <SolServicio />
-      </Route>
+      <Route exact path="/" component={HomeRackbot} />
+      <Route exact path="/agendar" component ={SolServicio} />
     </Switch>
   );
 }

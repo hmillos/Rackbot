@@ -1,15 +1,12 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from "react-router-dom";
-// Put any other imports below so that CSS from your
-// components takes precedence over default styles.
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Routes from "./Routes";
 
-function Navega(){
+
+
+export default function Navega(){
   const [expanded, setExpanded] = useState(false);
   return(
     <>
@@ -26,6 +23,7 @@ function Navega(){
             <NavDropdown.Item as={Link} to="/mantenimiento" onClick={() => setExpanded(false)}>Mantenimiento</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/redes" onClick={() => setExpanded(false)}>Redes</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/software" onClick={() => setExpanded(false)}>Programas y configuración general</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/asesoría" onClick={() => setExpanded(false)}>Asesoría en computadores y redes</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link as={Link} to="/faq" onClick={() => setExpanded(false)}>Preguntas Frecuentes</Nav.Link>
         </Nav>
@@ -41,24 +39,4 @@ function Navega(){
   </>
 );
 } 
-/* function Copyright() {
-  return (
-    <footer>
-    {'Copyright © '}
-      <a href="http://www.rackbot.co">Rackbot</a>
-      {' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </footer>
-  );
-} */ 
-const App = () => (
-  <>
-  <Navega/>
-  <div className="mt-3">
-  <Routes/>
-  </div>
-  </>
-);
 
-export default App;

@@ -4,9 +4,10 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import axios from 'axios';
 import Jumbotron from "react-bootstrap/Jumbotron";
-import './App.css';
+import '../App.css';
 
 export class SolServicio extends React.Component {
+
   constructor() {
     super();
     this.state = {checkedRadio: 0,tosAccepted: false,servicioCreado: false};
