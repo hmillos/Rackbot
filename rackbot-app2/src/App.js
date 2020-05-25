@@ -19,7 +19,7 @@ function Navega(){
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="mr-auto"> 
           <Nav.Link as={Link} to="/agendar" onClick={() => setExpanded(false)}>Agendar
           </Nav.Link>
           <NavDropdown title="Nuestros Servicios" id="collasible-nav-dropdown">
@@ -41,7 +41,6 @@ function Navega(){
   </>
 );
 } 
-
 /* function Copyright() {
   return (
     <footer>
